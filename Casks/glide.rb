@@ -1,5 +1,6 @@
 cask "glide" do
   arch arm: "aarch64", intel: "x64"
+
   version "0.2.4"
   sha256 arm:   "f930218dc27c2aa7daf9b066f7b65c4b8cb77ccb7777e39c26d517e9568411da",
          intel: "454b5d345c0453fbcdd4545af6bba12b48246f1dbe83008e8b6d49f6f08f3f6f"
@@ -20,11 +21,7 @@ cask "glide" do
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"
 
-  zap trash: [
-    "~/.glide/layout.ron",
-  ], rmdir: [
-    "~/.glide"
-  ]
+  zap trash: "~/.glide/layout.ron", rmdir: "~/.glide"
 
   caveats <<~EOS
     Glide requires Accessibility permissions to function.
