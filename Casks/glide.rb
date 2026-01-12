@@ -16,7 +16,6 @@ cask "glide" do
   end
 
   app "Glide.app"
-
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"
 
   zap trash: [
@@ -32,16 +31,16 @@ cask "glide" do
     On first launch, you will be prompted to grant these permissions.
     Follow the instructions in the app to enable them in System Settings.
 
+    To launch Glide, run:
+      glide launch
+
     To manage the current space, press Alt+Z.
     To exit Glide, press Alt+Shift+E.
 
     See the default configuration for key bindings:
-      https://github.com/glide-wm/glide/blob/main/glide.default.toml
+      https://github.com/glide-wm/glide/blob/v#{version}/glide.default.toml
 
     You can customize settings by editing ~/.glide.toml and running:
       glide config update
-
-    For live config updates as you save, use:
-      glide config update --watch
   EOS
 end
